@@ -19,16 +19,18 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1705635624,
-        "narHash": "sha256-DU0schxQOtBNO1c9hUsgYl+QMOXQMfRT7Qw/mg+ayno=",
-        "owner": "NixOS",
+        "lastModified": 1707288735,
+        "narHash": "sha256-znqaatHW+fP3RYkXqpHhIW5flFaDW0xEY5oFpQu4zjA=",
+        "owner": "JaviMerino",
         "repo": "nixpkgs",
-        "rev": "4471857c0a4a8a0ffc7bdbeaf1b998746ce12a82",
+        "rev": "8bfbfbafd60d19c8d8c5893411e92e494d2b0487",
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
+        "owner": "JaviMerino",
+        "ref": "python-ollama",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "root": {

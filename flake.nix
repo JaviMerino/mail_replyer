@@ -1,6 +1,8 @@
 {
   description = "mail replyer";
 
+  inputs.nixpkgs.url = "github:JaviMerino/nixpkgs/python-ollama";
+
   outputs = { nixpkgs, flake-utils, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
