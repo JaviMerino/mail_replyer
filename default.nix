@@ -3,7 +3,7 @@
   python3Packages,
 }:
 
-python3Packages.buildPythonPackage {
+python3Packages.buildPythonApplication {
   name = "mail_replyer";
   version = "0.1.0";
   pyproject = true;
