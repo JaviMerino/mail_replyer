@@ -17,25 +17,44 @@
         "type": "indirect"
       }
     },
-    "nixpkgs": {
+    "my_nur": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
-        "lastModified": 1707288735,
-        "narHash": "sha256-znqaatHW+fP3RYkXqpHhIW5flFaDW0xEY5oFpQu4zjA=",
+        "lastModified": 1707857384,
+        "narHash": "sha256-ox28uVIerQPggc2N691Ha12CkrypgGUGqmWGRx7rHnA=",
         "owner": "JaviMerino",
-        "repo": "nixpkgs",
-        "rev": "8bfbfbafd60d19c8d8c5893411e92e494d2b0487",
+        "repo": "nur-packages",
+        "rev": "ab1d7ce5732503a0f78e6f2ead45956ba955d649",
         "type": "github"
       },
       "original": {
         "owner": "JaviMerino",
-        "ref": "python-ollama",
-        "repo": "nixpkgs",
+        "repo": "nur-packages",
         "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1707743206,
+        "narHash": "sha256-AehgH64b28yKobC/DAWYZWkJBxL/vP83vkY+ag2Hhy4=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "2d627a2a704708673e56346fcb13d25344b8eaf3",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
       }
     },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
+        "my_nur": "my_nur",
         "nixpkgs": "nixpkgs"
       }
     },

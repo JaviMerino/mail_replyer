@@ -1,6 +1,7 @@
 {
   fetchPypi,
   python3Packages,
+  python-ollama
 }:
 
 python3Packages.buildPythonApplication {
@@ -14,6 +15,6 @@ python3Packages.buildPythonApplication {
   propagatedBuildInputs = with python3Packages; [
     fire
     jinja2
-    ollama
+    python-ollama
   ];
 }
