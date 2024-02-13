@@ -1,7 +1,6 @@
-{
-  fetchPypi,
-  python3Packages,
-  python-ollama
+{ fetchPypi
+, python3Packages
+, python-ollama
 }:
 
 python3Packages.buildPythonApplication {
