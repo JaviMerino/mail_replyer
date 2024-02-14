@@ -17,26 +17,6 @@
         "type": "indirect"
       }
     },
-    "my_nur": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1707857384,
-        "narHash": "sha256-ox28uVIerQPggc2N691Ha12CkrypgGUGqmWGRx7rHnA=",
-        "owner": "JaviMerino",
-        "repo": "nur-packages",
-        "rev": "ab1d7ce5732503a0f78e6f2ead45956ba955d649",
-        "type": "github"
-      },
-      "original": {
-        "owner": "JaviMerino",
-        "repo": "nur-packages",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1707743206,
@@ -51,11 +31,25 @@
         "type": "indirect"
       }
     },
+    "nur": {
+      "locked": {
+        "lastModified": 1707940784,
+        "narHash": "sha256-5RxdbwiPK9S2nWwKgCnlhw8ZNvSHHBtpdr/54lI1ruU=",
+        "owner": "nix-community",
+        "repo": "NUR",
+        "rev": "31ddfee271a852372d2c86883c01702ffdb71894",
+        "type": "github"
+      },
+      "original": {
+        "id": "nur",
+        "type": "indirect"
+      }
+    },
     "root": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "my_nur": "my_nur",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nur": "nur"
       }
     },
     "systems": {

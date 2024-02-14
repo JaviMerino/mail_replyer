@@ -1,16 +1,14 @@
 {
   description = "mail replyer";
 
-  inputs.my_nur = {
-    url = "github:JaviMerino/nur-packages";
-    inputs.nixpkgs.follows = "nixpkgs";
-  };
-
-  outputs = { nixpkgs, flake-utils, my_nur, ... }:
+  outputs = { nixpkgs, flake-utils, nur, ... }:
     flake-utils.lib.eachDefaultSystem (system:
       let
-        pkgs = nixpkgs.legacyPackages.${system};
-        python-ollama = my_nur.packages.${system}.python-ollama;
+        pkgs = import nixpkgs {
+          inherit system;
+          overlays = [ nur.overlay ];
+        };
+        python-ollama = pkgs.nur.repos.javimerino.python-ollama;
       in
       {
         packages = rec {
