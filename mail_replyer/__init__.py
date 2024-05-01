@@ -1,3 +1,4 @@
+import asyncio
 import fire
 import jinja2
 import ollama
@@ -17,14 +18,21 @@ def generate_prompt(context_file: Path, instructions_file: Path):
     return prompt_template.render(context=ctxt, additional_instructions=instructions)
 
 
+async def print_reply(model: str, prompt: str):
+    client = ollama.AsyncClient()
+    async for part in await client.generate(model=model, prompt=prompt, stream=True):
+        print(part["response"], end="", flush=True)
+    print("")
+
+
 def generate_email(
     context: str | os.PathLike, instructions: str | os.PathLike, model: str = "mistral"
 ):
     context_file = Path(context)
     instructions_file = Path(instructions)
     prompt = generate_prompt(context_file, instructions_file)
-    ollama_reply = ollama.generate(model=model, prompt=prompt)
-    print(ollama_reply["response"])
+
+    asyncio.run(print_reply(model=model, prompt=prompt))
 
 
 def main():
