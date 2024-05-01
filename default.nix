@@ -9,7 +9,8 @@ python3Packages.buildPythonPackage {
   buildInputs = [
     python3Packages.hatchling
   ];
-  propagatedBuildInputs = [
-    python3Packages.fire
+  propagatedBuildInputs = with python3Packages; [
+    fire
+    jinja2
   ];
 }

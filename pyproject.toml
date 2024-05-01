@@ -6,7 +6,8 @@ build-backend = "hatchling.build"
 name = "mail_replyer"
 version = "0.1.0"
 dependencies = [
-  "fire"
+  "fire",
+  "jinja2",
 ]
 
 [project.scripts]

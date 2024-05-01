@@ -1,0 +1,3 @@
+With this context:
+{{ context }}
+Write an email reply, in a business tone.
