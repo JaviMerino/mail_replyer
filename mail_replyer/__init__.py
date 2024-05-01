@@ -1,5 +1,6 @@
 import fire
 import jinja2
+import ollama
 import os
 from pathlib import Path
 
@@ -16,13 +17,14 @@ def generate_prompt(context_file: Path, instructions_file: Path):
     return prompt_template.render(context=ctxt, additional_instructions=instructions)
 
 
-def generate_email(context: str | os.PathLike, instructions: str | os.PathLike):
+def generate_email(
+    context: str | os.PathLike, instructions: str | os.PathLike, model: str = "mistral"
+):
     context_file = Path(context)
     instructions_file = Path(instructions)
     prompt = generate_prompt(context_file, instructions_file)
-    # ollama_reply = ollama.generate(model=MODEL, prompt=prompt)
-    # print(ollama_reply['response'])
-    print(prompt)
+    ollama_reply = ollama.generate(model=model, prompt=prompt)
+    print(ollama_reply["response"])
 
 
 def main():
