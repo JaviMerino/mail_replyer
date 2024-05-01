@@ -1,0 +1,13 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mail_replyer"
+version = "0.1.0"
+
+[project.scripts]
+mail_replyer = "mail_replyer:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["mail_replyer"]
