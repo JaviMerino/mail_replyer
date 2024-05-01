@@ -9,4 +9,7 @@ python3Packages.buildPythonPackage {
   buildInputs = [
     python3Packages.hatchling
   ];
+  propagatedBuildInputs = [
+    python3Packages.fire
+  ];
 }

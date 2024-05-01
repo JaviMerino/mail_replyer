@@ -5,6 +5,9 @@ build-backend = "hatchling.build"
 [project]
 name = "mail_replyer"
 version = "0.1.0"
+dependencies = [
+  "fire"
+]
 
 [project.scripts]
 mail_replyer = "mail_replyer:main"
