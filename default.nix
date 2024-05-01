@@ -24,7 +24,7 @@ let
   };
 in
 python3Packages.buildPythonPackage {
-  name = "email_replyer";
+  name = "mail_replyer";
   version = "0.1.0";
   pyproject = true;
   src = ./.;
