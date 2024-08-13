@@ -28,7 +28,7 @@ async def print_reply(model: str, prompt: str):
 
 
 def generate_email(
-    context: str | os.PathLike, instructions: str | os.PathLike, model: str = "gemma"
+    context: str | os.PathLike, instructions: str | os.PathLike, model: str = "llama3.1"
 ):
     """Generate an email reply.
 
